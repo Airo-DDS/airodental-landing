@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
@@ -31,6 +31,17 @@ const slideInRight = {
 }
 
 export default function Overview() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Auto-play video when it's loaded
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Auto-play prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <motion.section
       className="w-full overflow-hidden"
@@ -43,12 +54,19 @@ export default function Overview() {
         <motion.div 
           variants={fadeIn}
           custom={0}
-          className="w-full lg:w-1/2 bg-red-500 min-h-[300px] lg:min-h-[600px] relative"
+          className="w-full lg:w-1/2 min-h-[300px] lg:min-h-[600px] relative overflow-hidden"
         >
-          {/* Video will be added here. Using a placeholder for now */}
-          <div className="w-full h-full flex items-center justify-center text-white text-2xl">
-            Video Placeholder
-          </div>
+          <video 
+            ref={videoRef}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/overview-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </motion.div>
         
         {/* Text Container */}
