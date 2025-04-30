@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -35,8 +35,8 @@ const itemVariants = {
 
 const menuItems = [
   {
-    title: "Claire",
-    href: "/claire",
+    title: "Laine",
+    href: "/laine",
   },
   {
     title: "Saige",
@@ -58,6 +58,16 @@ const menuItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 10)
+    }
+    
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <motion.header 
@@ -72,11 +82,19 @@ export default function Header() {
         <motion.div 
           className="w-[60px] h-[60px] bg-[#f1f1f1] rounded-full flex items-center justify-center"
           variants={itemVariants}
+          animate={hasScrolled ? "withShadow" : "noShadow"}
+          initial="noShadow"
           whileHover={{ 
             scale: 1.05,
             transition: { duration: 0.2 }
           }}
           whileTap={{ scale: 0.98 }}
+          style={{
+            boxShadow: hasScrolled 
+              ? "0px 4px 20px rgba(0, 0, 0, 0.1)" 
+              : "0px 0px 0px rgba(0, 0, 0, 0)"
+          }}
+          transition={{ duration: 0.3 }}
         >
           <Link href="/">
             <Image 
@@ -93,6 +111,14 @@ export default function Header() {
         <motion.div 
           className="bg-[#f1f1f1] py-[18px] px-[33px] rounded-[50px] hidden md:block"
           variants={itemVariants}
+          animate={hasScrolled ? "withShadow" : "noShadow"}
+          initial="noShadow"
+          style={{
+            boxShadow: hasScrolled 
+              ? "0px 4px 20px rgba(0, 0, 0, 0.1)" 
+              : "0px 0px 0px rgba(0, 0, 0, 0)"
+          }}
+          transition={{ duration: 0.3 }}
         >
           <nav className="flex gap-[100px]">
             {menuItems.map((item) => (

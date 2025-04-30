@@ -3,13 +3,24 @@
 import { motion } from "framer-motion"
 import Image from "next/image";
 
+// Enhanced animation variants
 const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
+  hidden: { opacity: 0, y: 30 },
+  visible: (custom = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6 }
-  }
+    transition: {
+      delay: custom * 0.15,
+      duration: 0.7,
+      ease: [0.215, 0.61, 0.355, 1] // Custom cubic bezier for natural motion
+    }
+  })
+};
+
+const itemHoverTransition = {
+  type: "spring",
+  stiffness: 300,
+  damping: 20
 };
 
 interface GoalItem {
@@ -60,31 +71,54 @@ const goalItems: GoalItem[] = [
 
 export default function Goals() {
   return (
-    <section className="py-24 px-4">
+    <section className="relative w-full overflow-hidden py-[50px] md:py-[90px] px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.1, margin: "-100px" }}
       >
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-[60px]"
           variants={fadeIn}
+          custom={0}
         >
-          <p className="text-[24px] tracking-wide text-gray-500 mb-2 font-[family-name:var(--font-geist-sans)]">OUR GOALS</p>
-          <h2 className="text-[40px] text-black font-[family-name:var(--font-geist-sans)]">Complete AI Dental Ecosystem</h2>
+          <motion.div 
+            className="text-[18px] sm:text-[20px] md:text-[24px] font-normal font-[family-name:var(--font-geist-sans)] text-[#808080] tracking-wide mb-[8px] sm:mb-[12px]"
+            variants={fadeIn}
+            custom={0.2}
+          >
+            OUR GOALS
+          </motion.div>
+          <motion.div 
+            className="text-[28px] sm:text-[32px] md:text-[40px] font-normal font-[family-name:var(--font-geist-sans)] text-black leading-tight"
+            variants={fadeIn}
+            custom={0.5}
+          >
+            Complete AI Dental Ecosystem
+          </motion.div>
         </motion.div>
 
-        <ul className="space-y-[100px]">
+        <div className="space-y-[80px] md:space-y-[100px]">
           {goalItems.map((item, index) => (
-            <motion.li
+            <motion.div
               key={item.id}
               className="flex flex-col md:flex-row items-start"
               variants={fadeIn}
-              custom={index}
-              transition={{ delay: index * 0.1 }}
+              custom={index * 0.3 + 0.7}
+              whileHover={{ 
+                y: -5, 
+                transition: itemHoverTransition
+              }}
             >
-              <div className="flex-shrink-0 w-32 h-32 mx-auto md:mx-0 md:mr-[90px] mb-6 md:mb-0">
+              <motion.div 
+                className="flex-shrink-0 w-32 h-32 mx-auto md:mx-0 md:mr-[90px] mb-6 md:mb-0"
+                whileHover={{ 
+                  scale: 1.05,
+                  rotate: 5,
+                  transition: { type: "spring", stiffness: 400, damping: 10 }
+                }}
+              >
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -92,14 +126,14 @@ export default function Goals() {
                   height={128}
                   className="object-contain"
                 />
-              </div>
+              </motion.div>
               <div>
-                <h3 className="text-3xl text-[#C33768] mb-2 font-normal font-lato">{item.title}</h3>
-                <p className="text-xl text-[#777879] font-normal font-geist">{item.description}</p>
+                <h3 className="text-[18px] sm:text-[20px] font-semibold font-[family-name:var(--font-geist-sans)] text-[#C33768] mb-3">{item.title}</h3>
+                <p className="text-[16px] font-normal font-[family-name:var(--font-geist-sans)] text-[#3F3F46]">{item.description}</p>
               </div>
-            </motion.li>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </motion.div>
     </section>
   );

@@ -24,7 +24,7 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background image with animation */}
       <motion.div 
-        className="absolute inset-0 z-0 translate-y-[120px]"
+        className="absolute inset-0 z-0 bottom-0"
         initial={{ scale: 1.05, opacity: 0 }}
         animate={{ 
           scale: 1, 
@@ -35,15 +35,17 @@ export default function Hero() {
           }
         }}
       >
-        <div className="relative w-[100%] h-[80%] mx-auto">
-          <Image
-            src="/hero-bg-image.png"
-            alt="Hero background"
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
+        <div className="relative w-full h-full flex items-end">
+          <div className="relative w-full h-[100%]">
+            <Image
+              src="/hero-bg-image.png"
+              alt="Hero background"
+              fill
+              priority
+              className="object-cover object-bottom opacity-80"
+              sizes="100vw"
+            />
+          </div>
         </div>
       </motion.div>
       
@@ -83,24 +85,31 @@ export default function Hero() {
             custom={2}
             className="flex flex-col sm:flex-row items-center gap-[33px] flex-wrap"
           >
-            <Link 
-              href="#get-started" 
-              className="text-[#878788] text-[24px] sm:text-[22px] xs:text-[20px] relative after:absolute after:w-0 after:h-[1px] after:bg-[#878788] after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#6d6d6e] transition-colors duration-300"
+            <motion.div
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)",
+                transition: { duration: 0.2 }
+              }}
+              whileTap={{ scale: 0.98 }}
             >
-              Get started
-            </Link>
-            <Link 
-              href="#book-demo" 
-              className="text-[#09474C] text-[24px] sm:text-[22px] xs:text-[20px] border border-[#09474C] rounded-[50px] px-[21px] py-[5px] hover:bg-[#09474C] hover:text-white transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] hover:shadow-md"
-            >
-              Book a demo
-            </Link>
-            <Link 
-              href="#how-it-works" 
-              className="text-[#09474C] text-[24px] sm:text-[22px] xs:text-[20px] border border-[#09474C] rounded-[50px] px-[21px] py-[5px] hover:bg-[#09474C] hover:text-white transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] hover:shadow-md"
-            >
-              See how it works
-            </Link>
+              <Link 
+                href="#how-it-works" 
+                className="inline-block px-10 py-3 bg-white rounded-full border border-[#f1f1f1]"
+              >
+                <span 
+                  className="text-xl font-medium"
+                  style={{ 
+                    background: "linear-gradient(135deg, #C33A69 0%, #86399E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text"
+                  }}
+                >
+                  See how it works
+                </span>
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

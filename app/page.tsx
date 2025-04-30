@@ -2,6 +2,7 @@ import Header from "@/components/Header"
 import Hero from "@/components/Hero"
 import Overview from "@/components/Overview"
 import Features from "@/components/Features"
+import Solutions from "@/components/Solutions"
 import Goals from "@/components/Goals"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Overview />
         <Features />
+        <Solutions />
         <Goals />
         <Contact />
         {/* Additional sections can be added here */}
