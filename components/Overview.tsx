@@ -80,7 +80,7 @@ export default function Overview() {
             <motion.div 
               variants={fadeIn}
               custom={1}
-              className="text-[#7F7F7F] text-[24px] mb-2"
+              className="text-[#7F7F7F] text-[24px] xs:text-[18px] mb-2"
             >
               OVERVIEW
             </motion.div>
@@ -88,7 +88,7 @@ export default function Overview() {
             <motion.div 
               variants={fadeIn}
               custom={1.2}
-              className="text-[#0F1012] text-[40px] font-semibold font-[family-name:var(--font-geist-sans)]"
+              className="text-[#0F1012] text-[40px] sm:text-[32px] xs:text-[24px] font-semibold font-[family-name:var(--font-geist-sans)]"
             >
               A Modular Foundation
             </motion.div>
@@ -99,7 +99,7 @@ export default function Overview() {
             variants={fadeIn}
             custom={1.4}
           >
-            <div className="text-black text-[36px] md:text-[32px] sm:text-[28px] xs:text-[24px] font-medium font-[family-name:var(--font-lato)]">
+            <div className="text-black text-[36px] md:text-[32px] sm:text-[28px] xs:text-[20px] font-medium font-[family-name:var(--font-lato)]">
               Airodental is a next-generation platform for dental practices
               <br className="hidden md:block" />
               <br className="md:hidden" />
@@ -136,7 +136,7 @@ export default function Overview() {
                   />
                 </svg>
               </div>
-              <div className="text-[32px] md:text-[28px] sm:text-[24px] text-black group-hover:text-[#09474C] transition-colors duration-300">
+              <div className="text-[32px] md:text-[28px] sm:text-[24px] xs:text-[20px] text-black group-hover:text-[#09474C] transition-colors duration-300">
                 Join our Community
               </div>
             </Link>

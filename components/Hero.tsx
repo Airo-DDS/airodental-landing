@@ -54,7 +54,7 @@ export default function Hero() {
         <motion.div
           initial="hidden"
           animate="visible"
-          className="hero-main-container"
+          className="hero-main-container text-center"
         >
           {/* Hero Logo */}
           <motion.div
@@ -66,7 +66,7 @@ export default function Hero() {
               alt="Airodental Logo" 
               width={300} 
               height={100}
-              className="w-[300px] max-w-full h-auto mb-6 sm:mb-8"
+              className="w-[200px] sm:w-[300px] max-w-full h-auto mb-6 sm:mb-8 mx-auto"
             />
           </motion.div>
           
@@ -74,7 +74,7 @@ export default function Hero() {
           <motion.div 
             variants={fadeInUp}
             custom={1}
-            className="text-[36px] font-medium mb-[30px] text-black md:pr-10 sm:text-[30px] xs:text-[26px]"
+            className="text-[36px] font-medium mb-[30px] text-black md:pr-10 sm:text-[30px] xs:text-[24px]"
           >
             Revolutionizing dental practices with AI
           </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
           <motion.div 
             variants={fadeInUp}
             custom={2}
-            className="flex flex-col sm:flex-row items-center gap-[33px] flex-wrap"
+            className="flex flex-col sm:flex-row items-center justify-center gap-[33px] flex-wrap"
           >
             <motion.div
               whileHover={{ 
