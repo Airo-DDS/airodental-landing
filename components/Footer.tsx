@@ -74,44 +74,22 @@ export default function Footer() {
             <ul className="list-none p-0 m-0 space-y-3">
               {menuItems.map((item) => (
                 <li key={item.title}>
-                  {item.isSpecial ? (
-                    // Special styling for Laine
-                    <motion.button
-                      onClick={() => handleNavClick(item)}
-                      className="group flex items-center gap-2 text-white bg-gradient-to-r from-[#C33768] to-[#09474C] px-3 py-1.5 rounded-md text-base font-medium border-0 cursor-pointer transition-all duration-300"
-                      whileHover={{ scale: 1.05, x: 4 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span className="font-[family-name:var(--font-lato)]">{item.title}</span>
+                  <motion.button
+                    onClick={() => handleNavClick(item)}
+                    className="flex items-center gap-2 text-white text-base border-0 bg-transparent p-0 cursor-pointer font-[family-name:var(--font-lato)] hover:text-[#C33764] hover:font-bold transition-all duration-300"
+                  >
+                    <span>{item.title}</span>
+                    {item.isExternal && (
                       <svg 
-                        className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" 
+                        className="w-3 h-3" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                    </motion.button>
-                  ) : (
-                    // Regular nav items with enhanced hover effects
-                    <motion.button
-                      onClick={() => handleNavClick(item)}
-                      className="group relative text-white text-base border-0 bg-transparent p-0 cursor-pointer font-[family-name:var(--font-lato)] transition-all duration-300"
-                      whileHover={{ x: 4 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <span className="relative z-10 group-hover:text-[#C33768] transition-colors duration-300">
-                        {item.title}
-                      </span>
-                      <motion.div 
-                        className="absolute bottom-[-2px] left-0 h-[1px] bg-gradient-to-r from-[#C33768] to-[#09474C] origin-left"
-                        initial={{ scaleX: 0 }}
-                        whileHover={{ scaleX: 1 }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                        style={{ width: "100%" }}
-                      />
-                    </motion.button>
-                  )}
+                    )}
+                  </motion.button>
                 </li>
               ))}
             </ul>
@@ -125,17 +103,13 @@ export default function Footer() {
           <div className="flex gap-6">
             <motion.a 
               href="#" 
-              className="text-white/60 no-underline text-sm hover:text-white/80 transition-colors font-[family-name:var(--font-geist-sans)]"
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
+              className="text-white/60 no-underline text-sm hover:text-[#C33764] hover:font-bold transition-all duration-300 font-[family-name:var(--font-geist-sans)]"
             >
               Privacy Policy
             </motion.a>
             <motion.a 
               href="#" 
-              className="text-white/60 no-underline text-sm hover:text-white/80 transition-colors font-[family-name:var(--font-geist-sans)]"
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
+              className="text-white/60 no-underline text-sm hover:text-[#C33764] hover:font-bold transition-all duration-300 font-[family-name:var(--font-geist-sans)]"
             >
               Terms of Service
             </motion.a>

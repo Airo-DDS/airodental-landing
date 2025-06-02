@@ -151,59 +151,24 @@ export default function Header() {
           <nav className="flex gap-[60px]">
             {menuItems.map((item) => (
               <motion.div key={item.title} variants={itemVariants}>
-                {item.isSpecial ? (
-                  // Special styling for Laine
-                  <motion.button
-                    onClick={() => handleNavClick(item)}
-                    className="relative text-[16px] font-medium text-white bg-gradient-to-r from-[#C33764] to-[#09474C] px-4 py-2 rounded-full overflow-hidden group cursor-pointer border-0"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="relative z-10 flex items-center gap-1">
-                      {item.title}
+                <motion.button
+                  onClick={() => handleNavClick(item)}
+                  className="relative text-[16px] text-black cursor-pointer border-0 bg-transparent p-0 hover:text-[#C33764] hover:font-bold transition-all duration-300"
+                >
+                  <span className="flex items-center gap-1">
+                    {item.title}
+                    {item.isExternal && (
                       <svg 
-                        className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" 
+                        className="w-3 h-3" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                    </span>
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-r from-[#09474C] to-[#C33764] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={{ scale: 0 }}
-                      whileHover={{ scale: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </motion.button>
-                ) : (
-                  // Regular nav items with enhanced hover effects
-                  <motion.button
-                    onClick={() => handleNavClick(item)}
-                    className="relative text-[16px] text-black cursor-pointer border-0 bg-transparent p-0 group"
-                    whileHover={{ y: -2 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                  >
-                    <span className="relative z-10 transition-colors duration-300 group-hover:text-[#09474C]">
-                      {item.title}
-                    </span>
-                    <motion.div 
-                      className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[#C33764] to-[#09474C] origin-left"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
-                      style={{ width: "100%" }}
-                    />
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-r from-[#C33764]/10 to-[#09474C]/10 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={{ scale: 0.8 }}
-                      whileHover={{ scale: 1 }}
-                      transition={{ duration: 0.2 }}
-                      style={{ margin: "-4px" }}
-                    />
-                  </motion.button>
-                )}
+                    )}
+                  </span>
+                </motion.button>
               </motion.div>
             ))}
           </nav>
