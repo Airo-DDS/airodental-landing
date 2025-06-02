@@ -20,7 +20,7 @@ export default function FoundersMessage() {
   return (
     <motion.section
       id="founders-message"
-      className="w-full overflow-hidden pt-[50px]"
+      className="w-full overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}

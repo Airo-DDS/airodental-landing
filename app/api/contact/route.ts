@@ -6,7 +6,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Configuration for where emails are sent
-const TO_EMAIL_ADDRESS = 'haloweave@gmail.com'; // Target email address
+const TO_EMAIL_ADDRESS = 'deren@airodental.com'; // Target email address
 const FROM_EMAIL_ADDRESS = 'Airodental Inquiry <onboarding@resend.dev>'; // Sender email, using Resend's default for unverified domains
 
 export async function POST(request: Request) {

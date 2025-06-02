@@ -39,7 +39,7 @@ const cardHoverTransition = {
 
 export default function Features() {
   return (
-    <section className="relative w-full overflow-hidden py-[50px] md:py-[90px]">
+    <section id="features" className="relative w-full overflow-hidden py-[50px] md:py-[90px]">
       {/* Background Image with parallax effect */}
       <motion.div 
         className="absolute inset-0 z-0"

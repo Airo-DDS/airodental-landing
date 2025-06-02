@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect } from "react"
-import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 
 interface MobileMenuProps {
@@ -10,6 +9,9 @@ interface MobileMenuProps {
   menuItems: Array<{
     title: string
     href: string
+    isExternal?: boolean
+    isSpecial?: boolean
+    targetSection?: string
   }>
 }
 
@@ -93,6 +95,26 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
     }
   }, [isOpen])
 
+  const handleNavClick = (item: typeof menuItems[0]) => {
+    if (item.isExternal) {
+      window.open(item.href, '_blank', 'noopener,noreferrer')
+      onClose()
+      return
+    }
+
+    // Smooth scroll to section
+    if (item.targetSection) {
+      const section = document.getElementById(item.targetSection)
+      if (section) {
+        section.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }
+    onClose()
+  }
+
   return (
     <AnimatePresence mode="wait">
       {isOpen && (
@@ -153,13 +175,43 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                       key={item.title}
                       variants={menuItemVariants}
                     >
-                      <Link
-                        href={item.href}
-                        className="block py-2 text-lg font-medium text-gray-800 hover:text-[#09474C] transition-colors duration-300 relative after:absolute after:w-0 after:h-[1px] after:bg-[#09474C] after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
-                        onClick={onClose}
-                      >
-                        {item.title}
-                      </Link>
+                      {item.isSpecial ? (
+                        // Special styling for Laine in mobile
+                        <motion.button
+                          onClick={() => handleNavClick(item)}
+                          className="w-full text-left block py-3 px-4 text-lg font-medium text-white bg-gradient-to-r from-[#C33764] to-[#09474C] rounded-lg relative overflow-hidden group"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <span className="relative z-10 flex items-center gap-2">
+                            {item.title}
+                            <svg 
+                              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" 
+                              fill="none" 
+                              stroke="currentColor" 
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </span>
+                          <motion.div 
+                            className="absolute inset-0 bg-gradient-to-r from-[#09474C] to-[#C33764] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            initial={{ scale: 0 }}
+                            whileHover={{ scale: 1 }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        </motion.button>
+                      ) : (
+                        // Regular mobile nav items
+                        <motion.button
+                          onClick={() => handleNavClick(item)}
+                          className="w-full text-left block py-2 text-lg font-medium text-gray-800 hover:text-[#09474C] transition-colors duration-300 relative after:absolute after:w-0 after:h-[1px] after:bg-[#09474C] after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+                          whileHover={{ x: 4 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {item.title}
+                        </motion.button>
+                      )}
                     </motion.li>
                   ))}
                 </ul>

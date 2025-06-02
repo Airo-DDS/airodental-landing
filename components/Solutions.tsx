@@ -59,7 +59,7 @@ const solutionItems: SolutionItem[] = [
 
 export default function Solutions() {
   return (
-    <section className="relative">
+    <section id="solutions" className="relative">
       <motion.div 
         className="bg-[#161925] text-white px-5 sm:px-10 py-16 sm:py-20"
         initial="hidden"

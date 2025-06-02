@@ -44,6 +44,7 @@ export default function Overview() {
 
   return (
     <motion.section
+      id="overview"
       className="w-full overflow-hidden"
       initial="hidden"
       whileInView="visible"
