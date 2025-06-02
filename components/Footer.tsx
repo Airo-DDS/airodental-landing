@@ -102,13 +102,13 @@ export default function Footer() {
           </div>
           <div className="flex gap-6">
             <motion.a 
-              href="#" 
+              href="/privacy-policy" 
               className="text-white/60 no-underline text-sm hover:text-[#C33764] hover:font-bold transition-all duration-300 font-[family-name:var(--font-geist-sans)]"
             >
               Privacy Policy
             </motion.a>
             <motion.a 
-              href="#" 
+              href="/terms-of-service" 
               className="text-white/60 no-underline text-sm hover:text-[#C33764] hover:font-bold transition-all duration-300 font-[family-name:var(--font-geist-sans)]"
             >
               Terms of Service
