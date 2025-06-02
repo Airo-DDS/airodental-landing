@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
                 Privacy Policy
               </h1>
               <p className="text-gray-600 font-[family-name:var(--font-lato)]">
-                Last updated: January 15, 2025
+                Last updated: May 26, 2025
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export default function PrivacyPolicy() {
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="mb-2"><strong>Email:</strong> privacy@airodental.com</p>
                   <p className="mb-2"><strong>Address:</strong> Airodental Privacy Team</p>
-                  <p>123 Healthcare Innovation Drive, Suite 100, Medical City, MC 12345</p>
+                  <p>7101 NW 150th St, Ste 100 Oklahoma City, OK 73142 United States</p>
                 </div>
               </section>
 
