@@ -7,6 +7,8 @@ import Solutions from "@/components/Solutions"
 import Goals from "@/components/Goals"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import Founder from "@/components/Founder"
+import FoundersMessage from "@/components/FoundersMessage"
 
 export const metadata: Metadata = {
   title: "Airodental | Revolutionizing Dental Practices with AI",
@@ -20,9 +22,11 @@ export default function Home() {
       <main>
         <Hero />
         <Overview />
+        <Founder />
         <Features />
         <Solutions />
         <Goals />
+        <FoundersMessage />
         <Contact />
         {/* Additional sections can be added here */}
       </main>

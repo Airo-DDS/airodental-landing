@@ -45,7 +45,7 @@ interface SolutionItem {
 const solutionItems: SolutionItem[] = [
   {
     id: "communication",
-    image: "/solutions-image.png",
+    image: "/laine-pulse.gif",
     title: "Revolutionize patient communication with AI",
     description: "Airo Dental is redefining how dental offices engage with patients by leveraging AI-powered automation for phone calls, messages, and scheduling. Our AI-driven receptionist, Claire, ensures that every patient interaction is efficient, professional, and seamless."
   },
