@@ -12,7 +12,7 @@ const fadeIn = {
     transition: {
       delay: custom * 0.15,
       duration: 0.7,
-      ease: [0.215, 0.61, 0.355, 1] // Custom cubic bezier for natural motion
+      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)" // Custom cubic bezier for natural motion
     }
   })
 };
@@ -47,7 +47,7 @@ const solutionItems: SolutionItem[] = [
     id: "communication",
     image: "/laine-pulse.gif",
     title: "Revolutionize patient communication with AI",
-    description: "Airo Dental is redefining how dental offices engage with patients by leveraging AI-powered automation for phone calls, messages, and scheduling. Our AI-driven receptionist, Laine, ensures that every patient interaction is efficient, professional, and seamless."
+    description: "AiroDental is redefining how dental offices engage with patients by leveraging AI-powered automation for phone calls, messages, and scheduling. Our AI-driven receptionist, Laine, ensures that every patient interaction is efficient, professional, and seamless."
   },
   {
     id: "training",

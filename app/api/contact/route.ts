@@ -6,8 +6,8 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Configuration for where emails are sent
-const TO_EMAIL_ADDRESS = 'deren@airodental.com'; // Target email address
-const FROM_EMAIL_ADDRESS = 'Airodental Inquiry <onboarding@resend.dev>'; // Sender email, using Resend's default for unverified domains
+const TO_EMAIL_ADDRESS = 'deren@AiroDental.com'; // Target email address
+const FROM_EMAIL_ADDRESS = 'AiroDental Inquiry <onboarding@resend.dev>'; // Sender email, using Resend's default for unverified domains
 
 export async function POST(request: Request) {
   try {
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const { error: resendError } = await resend.emails.send({
       from: FROM_EMAIL_ADDRESS,
       to: [TO_EMAIL_ADDRESS],
-      subject: `New Airodental Contact: ${name} from ${practice}`,
+      subject: `New AiroDental Contact: ${name} from ${practice}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -30,15 +30,15 @@ export async function POST(request: Request) {
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { padding: 20px; border: 1px solid #eee; border-radius: 5px; max-width: 600px; margin: 20px auto; }
-            h1 { color: #C33764; } /* Airodental Pink */
+            h1 { color: #C33764; } /* AiroDental Pink */
             p { margin-bottom: 10px; }
-            strong { color: #09474C; } /* Airodental Teal */
+            strong { color: #09474C; } /* AiroDental Teal */
           </style>
         </head>
         <body>
           <div class="container">
             <h1>New Contact Form Submission</h1>
-            <p>You have received a new message from the Airodental contact form:</p>
+            <p>You have received a new message from the AiroDental contact form:</p>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
             <p><strong>Practice Name:</strong> ${practice}</p>

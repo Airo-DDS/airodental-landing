@@ -12,7 +12,7 @@ const fadeIn = {
     transition: {
       delay: custom * 0.15,
       duration: 0.7,
-      ease: [0.215, 0.61, 0.355, 1] // Custom cubic bezier for natural motion
+      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)" // Custom cubic bezier for natural motion
     }
   })
 };
@@ -35,7 +35,7 @@ const goalItems: GoalItem[] = [
     id: "efficiency",
     icon: "/goals-enhance-efficiency.png",
     title: "Enhance Efficiency & Reduce Operational Bottlenecks",
-    description: "Airo Dental is designed to help practices run more smoothly by automating redundant tasks, improving team communication, and streamlining patient interactions. Our AI modules integrate with existing workflows to reduce manual effort and improve accuracy."
+    description: "AiroDental is designed to help practices run more smoothly by automating redundant tasks, improving team communication, and streamlining patient interactions. Our AI modules integrate with existing workflows to reduce manual effort and improve accuracy."
   },
   {
     id: "compliance",
@@ -47,25 +47,25 @@ const goalItems: GoalItem[] = [
     id: "innovate",
     icon: "/goals-contionusly-innovate.png",
     title: "Continuously Innovate & Adapt AI for the Future of Dentistry",
-    description: "As AI technology evolves, so does Airo Dental. We remain committed to upgrading our platform with the latest advancements in AI, including voice recognition, machine learning, and predictive analytics, to provide best-in-class solutions for dental professionals."
+    description: "As AI technology evolves, so does AiroDental. We remain committed to upgrading our platform with the latest advancements in AI, including voice recognition, machine learning, and predictive analytics, to provide best-in-class solutions for dental professionals."
   },
   {
     id: "modular",
     icon: "/goals-fully-modular.png",
     title: "Create a Fully Modular, Scalable AI Ecosystem",
-    description: "Airo Dental isn't just a single product—it's a growing suite of AI-driven tools designed to support dental practices. From patient communication to marketing analytics, clinical note dictation, and beyond, our goal is to create a comprehensive AI platform that adapts to the ever-changing needs of dentistry."
+    description: "AiroDental isn't just a single product—it's a growing suite of AI-driven tools designed to support dental practices. From patient communication to marketing analytics, clinical note dictation, and beyond, our goal is to create a comprehensive AI platform that adapts to the ever-changing needs of dentistry."
   },
   {
     id: "scale",
     icon: "/goals-support-scale.png",
     title: "Support & Scale Practices of All Sizes",
-    description: "Whether you're a solo practitioner or a multi-location DSO, Airo Dental is built to scale with your practice. Our flexible AI modules can be tailored to different practice models, ensuring every office gets the right tools for its unique needs."
+    description: "Whether you're a solo practitioner or a multi-location DSO, AiroDental is built to scale with your practice. Our flexible AI modules can be tailored to different practice models, ensuring every office gets the right tools for its unique needs."
   },
   {
     id: "community",
     icon: "/goals-community.png",
     title: "Foster an AI-Powered Community for Dental Innovation",
-    description: "Airo Dental is not just a software company; it's a movement to modernize dentistry. By collaborating with leading dental professionals, AI researchers, and practice owners, we aim to shape the future of AI in the industry."
+    description: "AiroDental is not just a software company; it's a movement to modernize dentistry. By collaborating with leading dental professionals, AI researchers, and practice owners, we aim to shape the future of AI in the industry."
   }
 ];
 

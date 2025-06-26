@@ -4,32 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ClipboardEdit, MessageSquare, User } from "lucide-react"
-
-// Enhanced animation variants
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: custom * 0.15,
-      duration: 0.7,
-      ease: [0.215, 0.61, 0.355, 1] // Custom cubic bezier for natural motion
-    }
-  })
-}
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.7,
-      ease: [0, 0.71, 0.2, 1.01] // "Spring" like bounce effect
-    }
-  }
-}
+import { fadeIn, scaleIn } from "@/lib/animations"
 
 const cardHoverTransition = {
   type: "spring",

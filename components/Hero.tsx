@@ -4,20 +4,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import VapiModal from "./VapiModal"
-
-// Animation variants for consistent, reusable animations
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: custom * 0.2,
-      duration: 0.6,
-      ease: [0.215, 0.61, 0.355, 1] // Cubic bezier for a professional easing
-    }
-  })
-}
+import { fadeInUp } from "@/lib/animations"
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -65,7 +52,7 @@ export default function Hero() {
           >
             <Image 
               src="/hero-section-logo.png" 
-              alt="Airodental Logo" 
+              alt="AiroDental Logo" 
               width={300} 
               height={100}
               className="w-[200px] sm:w-[300px] max-w-full h-auto mb-6 sm:mb-8 mx-auto"

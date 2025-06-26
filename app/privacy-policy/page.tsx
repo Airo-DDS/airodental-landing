@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Airodental",
-  description: "Airodental's Privacy Policy - Learn how we protect and handle your personal information.",
+  title: "Privacy Policy | AiroDental",
+  description: "AiroDental's Privacy Policy - Learn how we protect and handle your personal information.",
 };
 
 export default function PrivacyPolicy() {
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
                   1. Information We Collect
                 </h2>
                 <p className="mb-4">
-                  At Airodental, we collect information you provide directly to us, such as when you:
+                  At AiroDental, we collect information you provide directly to us, such as when you:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li>Create an account or subscribe to our services</li>
@@ -119,7 +119,7 @@ export default function PrivacyPolicy() {
                   6. HIPAA Compliance
                 </h2>
                 <p className="mb-4">
-                  As a healthcare technology provider, Airodental is committed to HIPAA compliance. 
+                  As a healthcare technology provider, AiroDental is committed to HIPAA compliance. 
                   We implement appropriate safeguards to protect protected health information (PHI) 
                   and ensure our platform meets healthcare industry standards for data protection.
                 </p>
@@ -134,8 +134,8 @@ export default function PrivacyPolicy() {
                   please contact us at:
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="mb-2"><strong>Email:</strong> privacy@airodental.com</p>
-                  <p className="mb-2"><strong>Address:</strong> Airodental Privacy Team</p>
+                  <p className="mb-2"><strong>Email:</strong> privacy@AiroDental.com</p>
+                  <p className="mb-2"><strong>Address:</strong> AiroDental Privacy Team</p>
                   <p>7101 NW 150th St, Ste 100 Oklahoma City, OK 73142 United States</p>
                 </div>
               </section>

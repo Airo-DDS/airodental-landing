@@ -18,7 +18,7 @@ const menuItems = [
   },
   {
     title: "Laine",
-    href: "https://laine.airodental.com",
+    href: "https://laine.AiroDental.com",
     isExternal: true,
     isSpecial: true
   },
@@ -98,7 +98,7 @@ export default function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/10 pt-6">
           <div className="text-white/60 text-sm mb-4 md:mb-0 font-[family-name:var(--font-geist-sans)]">
-            Copyright 2025 @ Airodental
+            Copyright 2025 @ AiroDental
           </div>
           <div className="flex gap-6">
             <motion.a 

@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Airodental',
-    short_name: 'Airodental',
+    name: 'AiroDental',
+    short_name: 'AiroDental',
     description: 'AI-Powered Dental Practice Management',
     start_url: '/',
     display: 'standalone',

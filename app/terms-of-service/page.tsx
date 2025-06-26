@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Airodental",
-  description: "Airodental's Terms of Service - Understanding your rights and responsibilities when using our AI-powered dental platform.",
+  title: "Terms of Service | AiroDental",
+  description: "AiroDental's Terms of Service - Understanding your rights and responsibilities when using our AI-powered dental platform.",
 };
 
 export default function TermsOfService() {
@@ -33,7 +33,7 @@ export default function TermsOfService() {
                   1. Acceptance of Terms
                 </h2>
                 <p className="mb-4">
-                  By accessing and using Airodental&apos;s AI-powered dental practice management platform 
+                  By accessing and using AiroDental&apos;s AI-powered dental practice management platform 
                   (&quot;Service&quot;), you accept and agree to be bound by the terms and provision of this 
                   agreement. If you do not agree to abide by the terms of this agreement, you are 
                   not authorized to use or access this Service.
@@ -45,7 +45,7 @@ export default function TermsOfService() {
                   2. Description of Service
                 </h2>
                 <p className="mb-4">
-                  Airodental provides an AI-powered platform designed specifically for dental practices, 
+                  AiroDental provides an AI-powered platform designed specifically for dental practices, 
                   including but not limited to:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -128,7 +128,7 @@ export default function TermsOfService() {
                 </h2>
                 <p className="mb-4">
                   The Service and its original content, features, and functionality are and will remain 
-                  the exclusive property of Airodental and its licensors. The Service is protected by 
+                  the exclusive property of AiroDental and its licensors. The Service is protected by 
                   copyright, trademark, and other intellectual property laws.
                 </p>
                 <p className="mb-4">
@@ -157,7 +157,7 @@ export default function TermsOfService() {
                   9. Limitation of Liability
                 </h2>
                 <p className="mb-4">
-                  To the maximum extent permitted by applicable law, Airodental shall not be liable 
+                  To the maximum extent permitted by applicable law, AiroDental shall not be liable 
                   for any indirect, incidental, special, consequential, or punitive damages, or any 
                   loss of profits or revenues, whether incurred directly or indirectly, or any loss 
                   of data, use, goodwill, or other intangible losses.
@@ -187,8 +187,8 @@ export default function TermsOfService() {
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="mb-2"><strong>Email:</strong> legal@airodental.com</p>
-                  <p className="mb-2"><strong>Address:</strong> Airodental Legal Department</p>
+                  <p className="mb-2"><strong>Email:</strong> legal@AiroDental.com</p>
+                  <p className="mb-2"><strong>Address:</strong> AiroDental Legal Department</p>
                   <p>7101 NW 150th St, Ste 100 Oklahoma City, OK 73142 United States</p>
                 </div>
               </section>

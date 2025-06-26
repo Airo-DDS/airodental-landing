@@ -3,32 +3,7 @@
 import React, { useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-
-// Animation variants for consistent, reusable animations
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    transition: {
-      delay: custom * 0.2,
-      duration: 0.7,
-      ease: [0.215, 0.61, 0.355, 1]
-    }
-  })
-}
-
-const slideInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: custom * 0.2,
-      duration: 0.8,
-      ease: [0.215, 0.61, 0.355, 1]
-    }
-  })
-}
+import { fadeIn, slideInRight } from "@/lib/animations"
 
 export default function Overview() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -101,7 +76,7 @@ export default function Overview() {
             custom={1.4}
           >
             <div className="text-black text-[36px] md:text-[32px] sm:text-[28px] xs:text-[20px] font-medium font-[family-name:var(--font-lato)]">
-              Airodental is a next-generation platform for dental practices
+              AiroDental is a next-generation platform for dental practices
               <br className="hidden md:block" />
               <br className="md:hidden" />
               Leveraging AI to streamline patient communication and staff training

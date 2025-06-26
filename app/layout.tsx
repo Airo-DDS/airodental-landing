@@ -20,23 +20,23 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Airodental | AI-Powered Dental Practice Management",
-  description: "Revolutionize your dental practice with Airodental's AI solutions. Streamline patient communication, enhance staff training, and improve practice efficiency with our comprehensive AI ecosystem.",
-  keywords: "dental AI, dental practice management, AI dental assistant, dental automation, dental staff training, patient communication, dental technology, Airodental, dental practice software",
-  authors: [{ name: "Airodental Team" }],
-  creator: "Airodental",
-  publisher: "Airodental",
+  title: "AiroDental | AI-Powered Dental Practice Management",
+  description: "Revolutionize your dental practice with AiroDental's AI solutions. Streamline patient communication, enhance staff training, and improve practice efficiency with our comprehensive AI ecosystem.",
+  keywords: "dental AI, dental practice management, AI dental assistant, dental automation, dental staff training, patient communication, dental technology, AiroDental, dental practice software",
+  authors: [{ name: "AiroDental Team" }],
+  creator: "AiroDental",
+  publisher: "AiroDental",
   openGraph: {
-    title: "Airodental | AI-Powered Dental Practice Management",
-    description: "Revolutionize your dental practice with Airodental's AI solutions. Streamline patient communication, enhance staff training, and improve practice efficiency.",
-    url: "https://airodental.com",
-    siteName: "Airodental",
+    title: "AiroDental | AI-Powered Dental Practice Management",
+    description: "Revolutionize your dental practice with AiroDental's AI solutions. Streamline patient communication, enhance staff training, and improve practice efficiency.",
+    url: "https://AiroDental.com",
+    siteName: "AiroDental",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Airodental - AI for Dental Practices"
+        alt: "AiroDental - AI for Dental Practices"
       }
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airodental | AI-Powered Dental Practice Management",
+    title: "AiroDental | AI-Powered Dental Practice Management",
     description: "Revolutionize your dental practice with AI solutions for patient communication, staff training, and practice efficiency.",
     images: ["/twitter-image.png"],
   },

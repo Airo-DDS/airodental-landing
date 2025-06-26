@@ -14,7 +14,7 @@ const headerVariants = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: [0.215, 0.61, 0.355, 1],
+      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)",
       when: "beforeChildren",
       staggerChildren: 0.1
     }
@@ -48,7 +48,7 @@ const menuItems = [
   },
   {
     title: "Laine",
-    href: "https://laine.airodental.com",
+    href: "https://laine.AiroDental.com",
     isExternal: true,
     isSpecial: true
   },
@@ -127,7 +127,7 @@ export default function Header() {
           <Link href="/">
             <Image 
               src="/logo.png" 
-              alt="Airodental Logo" 
+              alt="AiroDental Logo" 
               width={40} 
               height={40}
               className="object-contain"
