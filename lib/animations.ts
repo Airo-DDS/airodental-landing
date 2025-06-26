@@ -1,7 +1,7 @@
 import { Variants } from "framer-motion"
 
-// Custom easing for professional animations
-export const customEase = "cubic-bezier(0.215, 0.61, 0.355, 1)"
+// Custom easing for professional animations - using array format for TypeScript compatibility
+export const customEase = [0.215, 0.61, 0.355, 1] as const
 
 // Modal animation
 export const modalSpring = {
