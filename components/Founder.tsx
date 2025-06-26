@@ -124,6 +124,7 @@ export default function Founder() {
           ))}
 
           {/* Button */}
+          {/* 
           <motion.div
             variants={fadeInUp}
             className="flex justify-center items-center sm:col-span-2 lg:col-span-1 lg:justify-self-end lg:self-center w-full pt-4 lg:pt-0"
@@ -135,6 +136,7 @@ export default function Founder() {
               Read Dr. Flesher&apos;s Full Story
             </Link>
           </motion.div>
+          */}
         </motion.div>
       </div>
     </motion.section>

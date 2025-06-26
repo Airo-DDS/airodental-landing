@@ -90,7 +90,7 @@ export default function Overview() {
             className="flex items-center gap-[30px] group"
           >
             <Link 
-              href="#community" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd9EmiEryZ6vqRJGm10hXMmjpdqV2JbTICFtk712f5cCYstzw/viewform" 
               className="flex items-center gap-[30px] group cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full bg-[#0F1012] flex items-center justify-center group-hover:bg-[#09474C] transition-colors duration-300 transform group-hover:scale-110 group-hover:rotate-45 transition-all duration-300">
