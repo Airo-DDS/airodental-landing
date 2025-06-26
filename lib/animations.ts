@@ -5,9 +5,23 @@ export const customEase = "cubic-bezier(0.215, 0.61, 0.355, 1)"
 
 // Modal animation
 export const modalSpring = {
-  type: "spring",
+  type: "spring" as const,
   damping: 25,
   stiffness: 500,
+}
+
+// Card hover transition
+export const cardHoverTransition = {
+  type: "spring" as const,
+  stiffness: 300,
+  damping: 20
+}
+
+// Icon hover transition
+export const iconHoverTransition = {
+  type: "spring" as const,
+  stiffness: 400,
+  damping: 10
 }
 
 // Fade in up animation variant

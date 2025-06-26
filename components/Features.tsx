@@ -4,13 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ClipboardEdit, MessageSquare, User } from "lucide-react"
-import { fadeIn, scaleIn } from "@/lib/animations"
-
-const cardHoverTransition = {
-  type: "spring",
-  stiffness: 300,
-  damping: 20
-}
+import { fadeIn, scaleIn, cardHoverTransition, iconHoverTransition } from "@/lib/animations"
 
 export default function Features() {
   return (
@@ -118,7 +112,7 @@ export default function Features() {
               <motion.div 
                 className="text-[#C33768] mr-3"
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={iconHoverTransition}
               >
                 <ClipboardEdit size={32} strokeWidth={1.75} />
               </motion.div>
@@ -146,7 +140,7 @@ export default function Features() {
               <motion.div 
                 className="text-[#C33768] mr-3"
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={iconHoverTransition}
               >
                 <MessageSquare size={32} strokeWidth={1.75} />
               </motion.div>
@@ -174,7 +168,7 @@ export default function Features() {
               <motion.div 
                 className="text-[#C33768] mr-3"
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={iconHoverTransition}
               >
                 <User size={32} strokeWidth={1.75} />
               </motion.div>
