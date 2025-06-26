@@ -1,9 +1,9 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
 import Image from "next/image"
+import VapiModal from "./VapiModal"
 
 // Animation variants for consistent, reusable animations
 const fadeInUp = {
@@ -20,6 +20,8 @@ const fadeInUp = {
 }
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background image with animation */}
@@ -93,8 +95,8 @@ export default function Hero() {
               }}
               whileTap={{ scale: 0.98 }}
             >
-              <Link 
-                href="#how-it-works" 
+              <button 
+                onClick={() => setIsModalOpen(true)}
                 className="inline-block px-10 py-3 bg-white rounded-full border border-[#f1f1f1]"
               >
                 <span 
@@ -108,11 +110,17 @@ export default function Hero() {
                 >
                   See how it works
                 </span>
-              </Link>
+              </button>
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* VapiModal */}
+      <VapiModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   )
 } 
