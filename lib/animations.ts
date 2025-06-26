@@ -97,7 +97,7 @@ export const menuVariants: Variants = {
     x: "100%",
     transition: {
       duration: 0.3,
-      ease: "cubic-bezier(0.6, 0.05, 0.01, 0.99)"
+      ease: [0.6, 0.05, 0.01, 0.99] as const
     }
   }
 }
