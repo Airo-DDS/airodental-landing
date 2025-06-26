@@ -2,23 +2,10 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image";
-
-// Enhanced animation variants
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (custom = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: custom * 0.15,
-      duration: 0.7,
-      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)" // Custom cubic bezier for natural motion
-    }
-  })
-};
+import { fadeIn, iconHoverTransition } from "@/lib/animations"
 
 const itemHoverTransition = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 300,
   damping: 20
 };
@@ -116,7 +103,7 @@ export default function Goals() {
                 whileHover={{ 
                   scale: 1.05,
                   rotate: 5,
-                  transition: { type: "spring", stiffness: 400, damping: 10 }
+                  transition: iconHoverTransition
                 }}
               >
                 <Image
