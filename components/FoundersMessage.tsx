@@ -3,18 +3,7 @@
 import React from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-    },
-  },
-}
+import { fadeInUp } from "@/lib/animations"
 
 export default function FoundersMessage() {
   return (
