@@ -24,6 +24,105 @@ export const iconHoverTransition = {
   damping: 10
 }
 
+// Header animation variants
+export const headerVariants: Variants = {
+  hidden: { 
+    y: -80, 
+    opacity: 0 
+  },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: customEase,
+      when: "beforeChildren" as const,
+      staggerChildren: 0.1
+    }
+  }
+}
+
+// Header item variants
+export const itemVariants: Variants = {
+  hidden: { 
+    y: -20, 
+    opacity: 0 
+  },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut"
+    }
+  }
+}
+
+// Mobile menu animation variants
+export const backdropVariants: Variants = {
+  hidden: { 
+    opacity: 0 
+  },
+  visible: { 
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn"
+    }
+  }
+}
+
+export const menuVariants: Variants = {
+  hidden: { 
+    x: "100%" 
+  },
+  visible: { 
+    x: 0,
+    transition: {
+      type: "spring" as const,
+      damping: 25,
+      stiffness: 300,
+      when: "beforeChildren" as const,
+      staggerChildren: 0.1
+    }
+  },
+  exit: {
+    x: "100%",
+    transition: {
+      duration: 0.3,
+      ease: "cubic-bezier(0.6, 0.05, 0.01, 0.99)"
+    }
+  }
+}
+
+export const menuItemVariants: Variants = {
+  hidden: { 
+    x: 20, 
+    opacity: 0 
+  },
+  visible: { 
+    x: 0, 
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut"
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2
+    }
+  }
+}
+
 // Fade in up animation variant
 export const fadeInUp: Variants = {
   hidden: { 

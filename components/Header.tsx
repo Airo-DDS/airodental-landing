@@ -5,33 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import MobileMenu from "./MobileMenu"
-
-// Animation variants
-const headerVariants = {
-  hidden: { y: -80, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-      when: "beforeChildren",
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: { y: -20, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut"
-    }
-  }
-}
+import { headerVariants, itemVariants } from "@/lib/animations"
 
 const menuItems = [
   {

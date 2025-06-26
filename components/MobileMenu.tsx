@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { backdropVariants, menuVariants, menuItemVariants } from "@/lib/animations"
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -13,64 +14,6 @@ interface MobileMenuProps {
     isSpecial?: boolean
     targetSection?: string
   }>
-}
-
-// Animation variants
-const backdropVariants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut"
-    }
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.2,
-      ease: "easeIn"
-    }
-  }
-}
-
-const menuVariants = {
-  hidden: { x: "100%" },
-  visible: { 
-    x: 0,
-    transition: {
-      type: "spring",
-      damping: 25,
-      stiffness: 300,
-      when: "beforeChildren",
-      staggerChildren: 0.1
-    }
-  },
-  exit: {
-    x: "100%",
-    transition: {
-      duration: 0.3,
-      ease: "cubic-bezier(0.6, 0.05, 0.01, 0.99)"
-    }
-  }
-}
-
-const menuItemVariants = {
-  hidden: { x: 20, opacity: 0 },
-  visible: { 
-    x: 0, 
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut"
-    }
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.2
-    }
-  }
 }
 
 export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuProps) {
