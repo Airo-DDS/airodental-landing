@@ -97,7 +97,7 @@ export default function Hero() {
             >
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="inline-block px-10 py-3 bg-white rounded-full border border-[#f1f1f1]"
+                className="inline-block px-10 py-3 bg-white rounded-full border border-[#f1f1f1] cursor-pointer"
               >
                 <span 
                   className="text-xl font-medium"
