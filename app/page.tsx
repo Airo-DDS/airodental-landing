@@ -21,9 +21,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Overview />
         <Founder />
-        <Features />
+        <Overview />
         <Solutions />
         <Goals />
         <FoundersMessage />
