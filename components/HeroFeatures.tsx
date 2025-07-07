@@ -4,7 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ClipboardEdit, MessageSquare, User } from "lucide-react"
-import { fadeIn, scaleIn, cardHoverTransition, iconHoverTransition } from "@/lib/animations"
+import { fadeIn, cardHoverTransition, iconHoverTransition } from "@/lib/animations"
 
 export default function HeroFeatures() {
   return (
@@ -12,11 +12,16 @@ export default function HeroFeatures() {
 
           <div id="hero-dashboard-screenshot">
             {/* Background animation */}
-            <img 
-                src="/ad-hero-wave.gif" 
-                alt="airodental-waves" 
+            <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="w-screen h-screen md:h-3/4 absolute top-10 left-0 object-contain md:object-cover -z-10"
-            />
+            >
+                <source src="/ad-hero-wave.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
           {/* Image Section with subtle floating animation */}
             <motion.div 
             // variants={scaleIn}

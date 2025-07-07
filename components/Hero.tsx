@@ -26,7 +26,7 @@ export default function Hero() {
               custom={0}
             >
               <Image 
-                src="/hero-section-logo.png" 
+                src="/ad-logo.png" 
                 alt="AiroDental Logo" 
                 width={300} 
                 height={100}
@@ -65,11 +65,25 @@ export default function Hero() {
                   >
                     See how it works
                   </span>
-                  <img 
-                    src="/play-button.png" 
-                    alt="Play" 
+                  <svg 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
                     className="w-6 h-6"
-                  />
+                  >
+                    <circle 
+                      cx="12" 
+                      cy="12" 
+                      r="12" 
+                      fill="#09474C"
+                    />
+                    <path 
+                      d="M10 8V16L16 12L10 8Z" 
+                      fill="white"
+                    />
+                  </svg>
                 </div>
               </button>
             </motion.div>
