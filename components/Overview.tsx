@@ -25,7 +25,7 @@ export default function Overview() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="bg-[#EEEEEB] flex flex-col lg:flex-row">
+      <div className="bg-[#fdfaf9] flex flex-col lg:flex-row">
         {/* Media Container */}
         <motion.div 
           variants={fadeIn}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
-import Features from "@/components/Features"
 import Overview from "@/components/Overview"
 import Solutions from "@/components/Solutions"
 import Goals from "@/components/Goals"
@@ -21,9 +20,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Overview />
         <Founder />
-        <Features />
+        <Overview />
         <Solutions />
         <Goals />
         <FoundersMessage />
