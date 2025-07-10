@@ -18,6 +18,7 @@ export default function HeroFeatures() {
                 muted 
                 playsInline
                 className="w-screen h-screen md:h-3/4 absolute top-10 left-0 object-contain md:object-cover -z-10"
+                poster="/ad-hero-wave-poster.jpg"
             >
                 <source src="/ad-hero-wave.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
