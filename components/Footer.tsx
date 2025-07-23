@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 
 const menuItems = [
   {
+    title: "Founder",
+    href: "#meet-the-founder",
+    isExternal: false,
+    targetSection: "meet-the-founder"
+  },
+  {
     title: "Overview",
     href: "#overview",
     isExternal: false,
@@ -21,19 +27,7 @@ const menuItems = [
     href: "https://laine.AiroDental.com",
     isExternal: true,
     isSpecial: true
-  },
-  {
-    title: "Features",
-    href: "#features",
-    isExternal: false,
-    targetSection: "features"
-  },
-  {
-    title: "Founder",
-    href: "#meet-the-founder",
-    isExternal: false,
-    targetSection: "meet-the-founder"
-  },
+  }
 ]
 
 export default function Footer() {

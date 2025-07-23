@@ -9,20 +9,23 @@ interface SolutionItem {
   image: string;
   title: string;
   description: string;
+  note: string;
 }
 
 const solutionItems: SolutionItem[] = [
   {
     id: "communication",
-    image: "/ai-sphere.gif",
-    title: "Revolutionize patient communication with AI",
-    description: "AiroDental is redefining how dental offices engage with patients by leveraging AI-powered automation for phone calls, messages, and scheduling. Our AI-driven receptionist, Laine, ensures that every patient interaction is efficient, professional, and seamless."
+    image: "/images/laine-card.png",
+    title: "Your complete AI Dental Admin Assistant",
+    description: "AiroDental is redefining how dental offices engage with patients by leveraging AI-powered automation for phone calls, messages, and scheduling. Our AI-driven receptionist, Laine, ensures that every patient interaction is efficient, professional, and seamless.",
+    note: "After losing over $200,000 in missed calls in my own multi-doctor practice, I designed Laine to ensure no opportunity slips away"
   },
   {
     id: "training",
-    image: "/ai-learning.png",
-    title: "Empower Dental Teams with Smarter Training & Coaching",
-    description: "Through Saige, our AI-powered coaching and training platform, we provide personalized learning paths for dental professionals. From front office staff to hygienists and associates, Saige adapts to each user's needs, delivering training that is interactive, effective, and scalable."
+    image: "/images/saige-card.png",
+    title: "Your AI Practice Coach & Training Platform",
+    description: "Through Saige, our AI-powered coaching and training platform, we provide personalized learning paths for dental professionals. From front office staff to hygienists and associates, Saige adapts to each user's needs, delivering training that is interactive, effective, and scalable.",
+    note: "Mentoring over 250 practices, I recognized that inconsistent training was the root cause of most operational problems. I apply the same personalized training approach I used to help practices achieve under 50% overhead and over 80% systemization."
   }
 ];
 
@@ -75,9 +78,9 @@ export default function Solutions() {
               <Image
                 src={solutionItems[0].image}
                 alt={solutionItems[0].title}
-                width={500}
+                width={400}
                 height={350}
-                className="w-3/4 md:w-1/2 h-auto object-cover rounded-md"
+                className="h-auto object-cover rounded-md"
                 priority
               />
             </motion.div>
@@ -85,6 +88,7 @@ export default function Solutions() {
             <div className="md:pl-5">
               <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-medium font-[family-name:var(--font-lato)] text-black mb-4">{solutionItems[0].title}</h3>
               <p className="text-[16px] sm:text-[18px] md:text-[20px] font-normal font-[family-name:var(--font-geist-sans)] text-black/75 leading-relaxed">{solutionItems[0].description}</p>
+              <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[0].note}&quot;</p>
             </div>
           </motion.div>
 
@@ -98,6 +102,7 @@ export default function Solutions() {
             <div className="md:order-first md:pr-5">
               <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-medium font-[family-name:var(--font-lato)] text-black mb-4">{solutionItems[1].title}</h3>
               <p className="text-[16px] sm:text-[18px] md:text-[20px] font-normal font-[family-name:var(--font-geist-sans)] text-black/75 leading-relaxed">{solutionItems[1].description}</p>
+              <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[1].note}&quot;</p>
             </div>
             
             <motion.div 
@@ -111,9 +116,9 @@ export default function Solutions() {
               <Image
                 src={solutionItems[1].image}
                 alt={solutionItems[1].title}
-                width={500}
+                width={400}
                 height={350}
-                className="w-full md:w-3/4 h-auto object-cover rounded-md"
+                className="h-auto object-cover rounded-md"
               />
             </motion.div>
           </motion.div>
