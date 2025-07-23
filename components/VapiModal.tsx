@@ -49,9 +49,9 @@ export default function VapiModal({ isOpen, onClose }: VapiModalProps) {
             
             {/* Modal Header */}
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Talk to Laine</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Experience AiroDental&apos;s AI - Laine</h2>
               <p className="text-gray-600">
-                Click the microphone to start your conversation with LAINE
+                Laine will demonstrate our voice AI technology while answering questions about our products and solutions for dental practices.
               </p>
             </div>
             

@@ -61,9 +61,9 @@ export default function Hero() {
               >
                 <div className="flex items-center justify-between">
                   <span 
-                    className="text-xl font-medium text-[#09474C] mr-6"
+                    className="text-xl font-semibold text-[#09474C] mr-6"
                   >
-                    See how it works
+                    Experience Our AI Live
                   </span>
                   <svg 
                     width="24" 
