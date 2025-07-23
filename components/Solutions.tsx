@@ -88,7 +88,7 @@ export default function Solutions() {
             <div className="md:pl-5">
               <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-medium font-[family-name:var(--font-lato)] text-black mb-4">{solutionItems[0].title}</h3>
               <p className="text-[16px] sm:text-[18px] md:text-[20px] font-normal font-[family-name:var(--font-geist-sans)] text-black/75 leading-relaxed">{solutionItems[0].description}</p>
-              <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[0].note}&quot;</p>
+              {/* <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[0].note}&quot;</p> */}
             </div>
           </motion.div>
 
@@ -102,7 +102,7 @@ export default function Solutions() {
             <div className="md:order-first md:pr-5">
               <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-medium font-[family-name:var(--font-lato)] text-black mb-4">{solutionItems[1].title}</h3>
               <p className="text-[16px] sm:text-[18px] md:text-[20px] font-normal font-[family-name:var(--font-geist-sans)] text-black/75 leading-relaxed">{solutionItems[1].description}</p>
-              <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[1].note}&quot;</p>
+              {/* <p className="text-sm text-black/50 mt-6">&quot;{solutionItems[1].note}&quot;</p> */}
             </div>
             
             <motion.div 
