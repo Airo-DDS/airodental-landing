@@ -106,7 +106,7 @@ export default function Solutions() {
             </div>
             
             <motion.div 
-              className="w-full md:order-last justify-center"
+              className="w-full flex md:order-last justify-center"
               variants={scaleIn}
               whileHover={{ 
                 scale: 1.03,
